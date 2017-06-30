@@ -6,7 +6,25 @@
       </ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content id="side-menu21"></ion-content>
+  <ion-content id="side-menu21">
+    <ion-list id="menu-list1">
+      <ion-item color="none" menuClose="" on-click="goToTrailers()" id="menu-list-item1">
+        Trailers
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToTrailer()" id="menu-list-item2">
+        Trailer
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToLogin()" id="menu-list-item3">
+        Login
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToFavoris()" id="menu-list-item4">
+        Favoris
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToPreferences()" id="menu-list-item5">
+        Preferences
+      </ion-item>
+    </ion-list>
+  </ion-content>
 </ion-menu>
 
 <ion-nav #mainContent [root]="rootPage"></ion-nav>

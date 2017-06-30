@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Trailer
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page2">
+  <ion-card>
+    <ion-card-header>
+      {{trailer.title}}
+    </ion-card-header>
+    <ion-card-content>
+      <p style="margin-bottom: 10px;">{{trailer.genre}}</p>
+      <div *ngIf="trailer.actors != null">
+        <p style="color: cornflowerblue; margin-bottom: 10px;">
+          Actors : {{trailer.actors}}
+        </p>
+      </div>
+      <img src="{{trailer.poster}}" style="width: 100%">
+    </ion-card-content>
+  </ion-card>
+</ion-content>

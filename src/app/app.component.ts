@@ -3,9 +3,11 @@ import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-
-
-import { ListFavoritePage } from '../pages/list-favorite/list-favorite';
+import { TrailerPage } from '../pages/trailer/trailer';
+import { LoginPage } from '../pages/login/login';
+import { FavorisPage } from '../pages/favoris/favoris';
+import { PreferencesPage } from '../pages/preferences/preferences';
+import { TrailersPage } from '../pages/trailers/trailers';
 
 
 
@@ -14,7 +16,7 @@ import { ListFavoritePage } from '../pages/list-favorite/list-favorite';
 })
 export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
-    rootPage:any = ListFavoritePage;
+    rootPage:any = TrailersPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -24,5 +26,21 @@ export class MyApp {
       splashScreen.hide();
     });
   }
-  
+
+  goToTrailers(params) {
+    if (!params) params = {};
+    this.navCtrl.setRoot(TrailersPage);
+  } goToTrailer(params) {
+    if (!params) params = {};
+    this.navCtrl.setRoot(TrailerPage);
+  } goToLogin(params) {
+    if (!params) params = {};
+    this.navCtrl.setRoot(LoginPage);
+  } goToFavoris(params) {
+    if (!params) params = {};
+    this.navCtrl.setRoot(FavorisPage);
+  } goToPreferences(params) {
+    if (!params) params = {};
+    this.navCtrl.setRoot(PreferencesPage);
+  }
 }
